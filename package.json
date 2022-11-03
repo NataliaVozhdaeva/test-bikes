@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NataliaVozhdaeva/test-bykes.git"
+    "url": "git+https://github.com/NataliaVozhdaeva/test-bikes.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/NataliaVozhdaeva/test-bykes/issues"
+    "url": "https://github.com/NataliaVozhdaeva/test-bikes/issues"
   },
-  "homepage": "https://github.com/NataliaVozhdaeva/test-bykes#readme",
+  "homepage": "https://github.com/NataliaVozhdaeva/test-bikes#readme",
   "devDependencies": {
     "gulp": "4.0.2",
     "gulp-sass": "5.1.0",

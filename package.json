@@ -1,0 +1,31 @@
+{
+  "name": "test-bikes",
+  "version": "1.0.0",
+  "description": "Тестовое задание: вертска + js",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NataliaVozhdaeva/test-bykes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NataliaVozhdaeva/test-bykes/issues"
+  },
+  "homepage": "https://github.com/NataliaVozhdaeva/test-bykes#readme",
+  "devDependencies": {
+    "gulp": "4.0.2",
+    "gulp-sass": "5.1.0",
+    "sass": "1.54.5",
+    "gulp-sourcemaps": "3.0.0",
+    "del": "6.0.0"
+  },
+  "dependencies": {
+    "browser-sync": "^2.27.10",
+    "normalize.css": "8.0.1"
+  }
+}

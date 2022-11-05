@@ -1,29 +1,76 @@
-* {
-  font-family: 'Montserrat', sans-serif;
+$base-decor-color: #3922c5;
+$light-text: #494949;
+$dark-text: #0c0c0c;
+$back-background: #d9d9d9;
+
+body {
+  background-color: #f4f4f4;
 }
 
-h1 {
-  font-weight: bold;
-  font-size: 26px;
-  line-height: 39px;
-  color: green;
+.bikes {
+  width: 846px;
+  opacity: hidden;
+  margin: auto;
+  box-sizing: border-box;
 }
 
-h2 {
-  font-weight: 500;
-  font-size: 22px;
-  line-height: 33px;
+.bikes-menu {
+  display: flex;
+  padding-left: 0;
+
+  &_item {
+    list-style: none;
+  }
+
+  &_link {
+    padding: 20px 24px;
+    background-color: $back-background;
+    border-radius: 20px 20px 0px 0px;
+
+    &:active {
+      color: $base-decor-color;
+      background-color: #fff;
+    }
+  }
 }
 
-h3 {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 27px;
+.bike {
+  padding: 40px 60px;
+  background-color: #fff;
+  border-radius: 0px 20px 20px 20px;
+
+  &_main {
+    display: grid;
+    grid-template-areas:
+      'img title'
+      'img text1'
+      'img text2';
+    column-gap: 70px;
+    margin-left: -60px;
+    margin-bottom: 40px;
+  }
+
+  &_img {
+    grid-area: img;
+  }
+
+  &_title {
+    width: 425px;
+    overflow-wrap: break-word;
+    grid-area: title;
+  }
+
+  &_description {
+    &:first-of-type {
+      grid-area: text1;
+    }
+
+    &:last-of-type {
+      grid-area: text2;
+    }
+  }
 }
 
-.text,
-.btn {
-  font-style: normal;
-  font-size: 16px;
-  line-height: 24px;
+hr {
+  border: 0.5px solid $back-background;
 }

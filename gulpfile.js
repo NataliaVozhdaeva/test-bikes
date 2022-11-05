@@ -53,7 +53,7 @@ function html() {
 
 function serve() {
   // watch('src/js/**/*.js', buildJs);
-  watch('src/scss/**/*.scss', buildSass);
+  watch('src/styles/**/*.scss', buildSass);
   watch('src/**/*.html', html);
 }
 
@@ -68,7 +68,4 @@ function cleanDist() {
 }
 
 exports.build = series(cleanDist, buildSass, /* buildJs, */ html, copy);
-exports.default = series(
-  [html, buildSass /* , buildJs */],
-  parallel(browsersync, serve)
-);
+exports.default = series([html, buildSass], parallel(browsersync, serve));

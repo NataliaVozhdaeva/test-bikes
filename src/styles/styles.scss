@@ -32,8 +32,14 @@ h3 {
 link:visited {
   text-decoration: none;
   color: $dark-text;
-
   font-weight: 500;
   font-size: 22px;
   line-height: 33px;
+}
+
+.btn {
+  border-radius: 16px;
+  padding: 14px 24px;
+  border: none;
+  cursor: pointer;
 }

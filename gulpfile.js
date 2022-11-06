@@ -21,7 +21,7 @@ function buildSass() {
       .pipe(sourcemaps.init())
       .pipe(sass())
       .on('error', sass.logError)
-      /* .pipe(
+      /*.pipe(
       postcss([
         autoprefixer({
           overrideBrowserslist: ['last 2 versions'],
@@ -30,12 +30,15 @@ function buildSass() {
       ])
     ) 
     .pipe(rename('styles.min.css'))*/
-      //.pipe(dest('src/css'))
-      .pipe(dest('dist/css'))
       .pipe(dest('src/css'))
+      .pipe(dest('dist/css'))
       .pipe(sourcemaps.write('.'))
       .pipe(browserSync.stream())
   );
+}
+
+function html() {
+  return src('src/**/*.html').pipe(dest('dist/')).pipe(browserSync.stream());
 }
 
 /* function buildJs() {
@@ -47,12 +50,8 @@ function buildSass() {
   );
 } */
 
-function html() {
-  return src('src/**/*.html').pipe(dest('dist/')).pipe(browserSync.stream());
-}
-
 function serve() {
-  // watch('src/js/**/*.js', buildJs);
+  //watch('src/js/**/*.js', buildJs);
   watch('src/styles/**/*.scss', buildSass);
   watch('src/**/*.html', html);
 }

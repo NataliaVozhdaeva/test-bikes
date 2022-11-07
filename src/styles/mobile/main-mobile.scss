@@ -1,4 +1,9 @@
 @media only screen and (max-width: 375px) {
+  $base-decor-color: #3922c5;
+  $light-text: #494949;
+  $dark-text: #0c0c0c;
+  $back-background: #d9d9d9;
+
   h1 {
     font-weight: bold;
     font-size: 24px;
@@ -28,19 +33,65 @@
     display: none;
   }
 
+  .mobile__bikes-menu_link {
+    display: block;
+    position: relative;
+    border-radius: 20px;
+    background-color: #fff;
+    padding: 21px;
+    margin-top: 20px;
+
+    &::after {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border: 2px solid $dark-text;
+      border-top: none;
+      border-left: none;
+      position: absolute;
+      top: calc(50% - 7px);
+      right: 33px;
+      transform: rotate(45deg);
+    }
+  }
+
+  .active {
+    color: $base-decor-color;
+    background-color: #fff;
+    border-radius: 20px 20px 0 0;
+
+    &::after {
+      content: '';
+      top: 50%;
+      transform: rotate(225deg);
+    }
+  }
+
   .bikes {
+    display: flex;
+    flex-direction: column;
     width: 335px;
-    margin: auto;
+    margin: 0 auto 30px;
     box-sizing: border-box;
 
     &_form {
-      background-color: #fff;
-      border-radius: 20px;
-      padding: 30px 20px;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      background: #f4f4f4;
+      position: relative;
     }
   }
 
   .bike {
+    background-color: #fff;
+    padding: 30px 20px;
+
+    &.active {
+      display: block;
+      border-radius: 0 0 20px 20px;
+    }
+
     &_main {
       display: flex;
       flex-direction: column;
@@ -52,10 +103,15 @@
     &_img {
       width: 295px;
       height: auto;
+      padding-top: 0;
     }
   }
 
   .features_item {
+    width: 100%;
+  }
+
+  .features__icons > .features_item {
     width: 100%;
   }
 
@@ -71,8 +127,9 @@
   }
 
   .submit-wrapper {
-    margin-top: 30px;
-    padding: 20px 30px;
+    margin: 30px 20px 0;
+    padding: 30px 20px;
+    justify-content: space-between;
   }
 
   .submit_btn.btn {

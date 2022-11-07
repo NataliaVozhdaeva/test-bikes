@@ -15,6 +15,7 @@
 
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
+
   <body>
     <header class="header"></header>
     <main class="main">
@@ -22,15 +23,16 @@
         <nav class="bikes_navigaion">
           <ul class="bikes-menu">
             <li class="bikes-menu_item">
-              <a href="" class="bikes-menu_link link 1">Горный велосипед</a>
+              <a class="bikes-menu_link link">Горный велосипед </a>
             </li>
             <li class="bikes-menu_item">
-              <a href="" class="bikes-menu_link link 2">Женский велосипед</a>
+              <a class="bikes-menu_link link">Женский велосипед</a>
             </li>
           </ul>
         </nav>
         <div class="bikes_form">
-          <div class="bike 1">
+          <a class="mobile__bikes-menu_link link">Горный велосипед </a>
+          <div class="bike">
             <div class="bike_main">
               <img
                 src="./img/mountain-bike-full.jpg"
@@ -68,9 +70,15 @@
               placeholder="Алюминиевый сплав"
             />
             <button class="features_btn btn">Добавить</button>
+
+            <div class="submit-wrapper">
+              <button class="submit_btn btn">Окей</button>
+              <button class="cansel_btn btn">Отмена</button>
+            </div>
           </div>
 
-          <div class="bike 2">
+          <a class="mobile__bikes-menu_link link">Женский велосипед </a>
+          <div class="bike">
             <div class="bike_main">
               <img
                 src="./img/womans-bike-full.jpg"
@@ -106,10 +114,11 @@
               placeholder="Алюминиевый сплав"
             />
             <button class="features_btn btn">Добавить</button>
-          </div>
-          <div class="submit-wrapper">
-            <button class="submit_btn btn">Окей</button>
-            <button class="cansel_btn btn">Отмена</button>
+
+            <div class="submit-wrapper">
+              <button class="submit_btn btn">Окей</button>
+              <button class="cansel_btn btn">Отмена</button>
+            </div>
           </div>
         </div>
       </section>

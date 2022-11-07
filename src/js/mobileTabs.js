@@ -1,18 +1,18 @@
-class TabsManager {
-  constructor(tabsElem) {
+class MobileTabsManager {
+  constructor() {
     this.tabs = [];
     this.activeTab = null;
 
-    this.init(tabsElem);
+    this.init();
     this.activateTab(this.tabs[0]);
   }
 
-  init(tabsElem) {
-    const links = tabsElem.querySelectorAll('.bikes-menu_item');
+  init() {
+    const mobileLinks = document.querySelectorAll('.mobile__bikes-menu_link');
     const contents = document.querySelectorAll('.bike');
 
-    for (let i = 0; i < links.length; i++) {
-      const tab = new TabItem(links[i], contents[i]);
+    for (let i = 0; i < mobileLinks.length; i++) {
+      const tab = new TabItem(mobileLinks[i], contents[i]);
       this.tabs.push(tab);
 
       tab.onClick(() => this.activateTab(tab));
@@ -52,4 +52,4 @@ export class TabItem {
   }
 }
 
-export default TabsManager;
+export default MobileTabsManager;

@@ -1,9 +1,6 @@
 const { src, dest, watch, series, parallel } = require('gulp');
 
 const sass = require('gulp-sass')(require('sass'));
-/* const postcss = require('gulp-postcss');
-const autoprefixer = require('autoprefixer');
-const cssnano = require('cssnano'); */
 const browserSync = require('browser-sync').create();
 const del = require('del');
 const sourcemaps = require('gulp-sourcemaps');
@@ -18,25 +15,14 @@ function browsersync() {
 }
 
 function buildSass() {
-  return (
-    src('src/styles/**/*.scss')
-      .pipe(sourcemaps.init())
-      .pipe(sass())
-      .on('error', sass.logError)
-      /*.pipe(
-      postcss([
-        autoprefixer({
-          overrideBrowserslist: ['last 2 versions'],
-        }),
-        cssnano(),
-      ])
-    ) 
-    .pipe(rename('styles.min.css'))*/
-      .pipe(dest('src/css'))
-      .pipe(dest('dist/css'))
-      .pipe(sourcemaps.write('.'))
-      .pipe(browserSync.stream())
-  );
+  return src('src/styles/**/*.scss')
+    .pipe(sourcemaps.init())
+    .pipe(sass())
+    .on('error', sass.logError)
+    .pipe(dest('src/css'))
+    .pipe(dest('dist/css'))
+    .pipe(sourcemaps.write('.'))
+    .pipe(browserSync.stream());
 }
 
 function html() {

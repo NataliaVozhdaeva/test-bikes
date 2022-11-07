@@ -1,29 +1,81 @@
-/* * {
-  font-family: 'Montserrat', sans-serif;
-}
+@media only screen and (max-width: 375px) {
+  h1 {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+  }
 
-h1 {
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 36px;
-}
+  h2 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+  }
 
-h2 {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 30px;
-}
+  h3 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+  }
 
-h3 {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-}
+  .text,
+  .btn {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 21px;
+  }
 
-.text,
-.btn {
-  font-style: normal;
-  font-size: 14px;
-  line-height: 21px;
+  .bikes-menu {
+    display: none;
+  }
+
+  .bikes {
+    width: 335px;
+    margin: auto;
+    box-sizing: border-box;
+
+    &_form {
+      background-color: #fff;
+      border-radius: 20px;
+      padding: 30px 20px;
+    }
+  }
+
+  .bike {
+    &_main {
+      display: flex;
+      flex-direction: column;
+      column-gap: 0px;
+      margin-left: 0px;
+      margin-bottom: 30px;
+    }
+
+    &_img {
+      width: 295px;
+      height: auto;
+    }
+  }
+
+  .features_item {
+    width: 100%;
+  }
+
+  .features_input {
+    margin-bottom: 15px;
+  }
+
+  .features_input,
+  .features_btn {
+    width: 295px;
+    height: 52px;
+    box-sizing: border-box;
+  }
+
+  .submit-wrapper {
+    margin-top: 30px;
+    padding: 20px 30px;
+  }
+
+  .submit_btn.btn {
+    padding: 15px 40px;
+  }
 }
- */

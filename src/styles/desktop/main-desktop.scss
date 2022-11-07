@@ -16,12 +16,18 @@ body {
     background-color: #fff;
     border-radius: 0px 20px 20px 20px;
     padding: 40px 60px;
+    overflow: hidden;
   }
 }
 
 .bikes-menu {
   display: flex;
   padding-left: 0;
+
+  .active {
+    color: $base-decor-color;
+    background-color: #fff;
+  }
 
   &_item {
     list-style: none;
@@ -31,15 +37,16 @@ body {
     padding: 20px 24px;
     background-color: $back-background;
     border-radius: 20px 20px 0px 0px;
-
-    &:active {
-      color: $base-decor-color;
-      background-color: #fff;
-    }
   }
 }
 
 .bike {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+
   &_main {
     display: grid;
     grid-template-areas:
@@ -47,16 +54,17 @@ body {
       'img text1'
       'img text2';
     column-gap: 70px;
-    margin-left: -60px;
+    row-gap: 16px;
+    margin-left: -128px;
     margin-bottom: 40px;
   }
 
   &_img {
     grid-area: img;
+    padding-top: 20px;
   }
 
   &_title {
-    width: 425px;
     overflow-wrap: break-word;
     grid-area: title;
   }
